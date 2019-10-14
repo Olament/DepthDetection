@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541B08CB23505C8E0098326B /* DepthToGrayscaleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B08CA23505C8E0098326B /* DepthToGrayscaleConverter.swift */; };
+		541B08CD23505CB10098326B /* FilterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B08CC23505CB00098326B /* FilterRenderer.swift */; };
+		541B08D123505D220098326B /* minMaxFromBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 541B08D023505D220098326B /* minMaxFromBuffer.m */; };
+		541B08D42350619B0098326B /* DepthToGrayscale.metal in Sources */ = {isa = PBXBuildFile; fileRef = 541B08D32350619B0098326B /* DepthToGrayscale.metal */; };
 		542AFB97234F083C00538CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AFB96234F083C00538CEB /* AppDelegate.swift */; };
 		542AFB99234F083C00538CEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AFB98234F083C00538CEB /* SceneDelegate.swift */; };
-		542AFB9B234F083C00538CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AFB9A234F083C00538CEB /* ViewController.swift */; };
 		542AFB9E234F083C00538CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542AFB9C234F083C00538CEB /* Main.storyboard */; };
 		542AFBA0234F084000538CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542AFB9F234F084000538CEB /* Assets.xcassets */; };
 		542AFBA3234F084000538CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542AFBA1234F084000538CEB /* LaunchScreen.storyboard */; };
+		542AFBAC234F08C700538CEB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AFBAB234F08C700538CEB /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		541B08CA23505C8E0098326B /* DepthToGrayscaleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DepthToGrayscaleConverter.swift; path = ../render/DepthToGrayscaleConverter.swift; sourceTree = "<group>"; };
+		541B08CC23505CB00098326B /* FilterRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterRenderer.swift; path = ../render/FilterRenderer.swift; sourceTree = "<group>"; };
+		541B08CE23505D210098326B /* DepthDetection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DepthDetection-Bridging-Header.h"; sourceTree = "<group>"; };
+		541B08CF23505D220098326B /* minMaxFromBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = minMaxFromBuffer.h; path = ../render/minMaxFromBuffer.h; sourceTree = "<group>"; };
+		541B08D023505D220098326B /* minMaxFromBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = minMaxFromBuffer.m; path = ../render/minMaxFromBuffer.m; sourceTree = "<group>"; };
+		541B08D32350619B0098326B /* DepthToGrayscale.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DepthToGrayscale.metal; sourceTree = "<group>"; };
 		542AFB93234F083C00538CEB /* DepthDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542AFB96234F083C00538CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542AFB98234F083C00538CEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		542AFB9A234F083C00538CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		542AFB9D234F083C00538CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		542AFB9F234F084000538CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		542AFBA2234F084000538CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		542AFBA4234F084000538CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		542AFBAB234F08C700538CEB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541B08D5235061A20098326B /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				541B08D32350619B0098326B /* DepthToGrayscale.metal */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		541B08D62350677C0098326B /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				541B08CA23505C8E0098326B /* DepthToGrayscaleConverter.swift */,
+				541B08CC23505CB00098326B /* FilterRenderer.swift */,
+				541B08CF23505D220098326B /* minMaxFromBuffer.h */,
+				541B08D023505D220098326B /* minMaxFromBuffer.m */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
 		542AFB8A234F083C00538CEB = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +85,26 @@
 		542AFB95234F083C00538CEB /* DepthDetection */ = {
 			isa = PBXGroup;
 			children = (
-				542AFB96234F083C00538CEB /* AppDelegate.swift */,
-				542AFB98234F083C00538CEB /* SceneDelegate.swift */,
-				542AFB9A234F083C00538CEB /* ViewController.swift */,
 				542AFB9C234F083C00538CEB /* Main.storyboard */,
-				542AFB9F234F084000538CEB /* Assets.xcassets */,
-				542AFBA1234F084000538CEB /* LaunchScreen.storyboard */,
+				542AFBAB234F08C700538CEB /* CameraViewController.swift */,
+				541B08D62350677C0098326B /* Rendering */,
+				541B08D5235061A20098326B /* Shader */,
+				542AFBAA234F085800538CEB /* Supporting files */,
+				541B08CE23505D210098326B /* DepthDetection-Bridging-Header.h */,
 				542AFBA4234F084000538CEB /* Info.plist */,
 			);
 			path = DepthDetection;
+			sourceTree = "<group>";
+		};
+		542AFBAA234F085800538CEB /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				542AFB9F234F084000538CEB /* Assets.xcassets */,
+				542AFB96234F083C00538CEB /* AppDelegate.swift */,
+				542AFB98234F083C00538CEB /* SceneDelegate.swift */,
+				542AFBA1234F084000538CEB /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +139,7 @@
 				TargetAttributes = {
 					542AFB92234F083C00538CEB = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -138,9 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542AFB9B234F083C00538CEB /* ViewController.swift in Sources */,
+				541B08D42350619B0098326B /* DepthToGrayscale.metal in Sources */,
 				542AFB97234F083C00538CEB /* AppDelegate.swift in Sources */,
+				541B08CB23505C8E0098326B /* DepthToGrayscaleConverter.swift in Sources */,
 				542AFB99234F083C00538CEB /* SceneDelegate.swift in Sources */,
+				541B08D123505D220098326B /* minMaxFromBuffer.m in Sources */,
+				541B08CD23505CB10098326B /* FilterRenderer.swift in Sources */,
+				542AFBAC234F08C700538CEB /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L3J5KKFY7;
 				INFOPLIST_FILE = DepthDetection/Info.plist;
@@ -293,6 +339,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zixuan.DepthDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DepthDetection/DepthDetection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L3J5KKFY7;
 				INFOPLIST_FILE = DepthDetection/Info.plist;
@@ -311,6 +360,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zixuan.DepthDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DepthDetection/DepthDetection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
